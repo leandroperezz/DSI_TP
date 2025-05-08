@@ -1,0 +1,120 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f7f6; /* Un gris claro para el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    background-color: #ffffff; /* Fondo blanco para el cuadro */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del cuadro de login */
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #2c3e50; /* Un azul oscuro para el título */
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Grupos de Inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db; /* Color azul para el borde en foco */
+}
+
+/* Botón de Ingresar */
+.btn-ingresar {
+    background-color: #3498db; /* Azul principal */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-ingresar:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Enlace de Olvidó Contraseña */
+.forgot-password {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Responsividad para celulares */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 25px 20px; /* Menos padding en móviles */
+    }
+
+    .login-box h1 {
+        font-size: 22px; /* Título un poco más pequeño */
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .btn-ingresar {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}

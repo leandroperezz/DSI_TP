@@ -1,0 +1,139 @@
+/* Estilos para registro_pasantia.html y otras páginas de formularios */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio para formularios largos */
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+}
+
+.form-box {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; /* Más ancho para mostrar detalles */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin: 0;
+}
+
+.btn-back {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el select y la sección de detalles */
+#pasantiaSelect {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.detalles-pasantia {
+    background-color: #f9f9f9; /* Fondo ligeramente diferente para la sección de detalles */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.detalles-pasantia h2 {
+    color: #3498db;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.detalles-pasantia h3 {
+    color: #555;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.detalles-pasantia p,
+.detalles-pasantia ul {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.detalles-pasantia ul {
+    list-style: none;
+    padding-left: 0;
+}
+.detalles-pasantia ul li {
+    margin-bottom: 5px;
+}
+.detalles-pasantia ul li strong {
+    color: #2c3e50;
+}
+
+/* Botón de acción (Siguiente, Confirmar, etc.) */
+.btn-accion {
+    background-color: #2ecc71; /* Verde para acciones positivas */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto; /* Ocupa el ancho necesario */
+    display: block; /* Para centrarlo si es necesario */
+    margin: 20px auto 0 auto; /* Margen superior y centrado */
+    transition: background-color 0.3s ease;
+}
+
+.btn-accion:hover {
+    background-color: #27ae60; /* Verde más oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-box {
+        padding: 25px 20px;
+    }
+    .form-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-header h1 {
+        font-size: 22px;
+        margin-top:10px;
+    }
+    .btn-back {
+        margin-bottom: 10px;
+    }
+}

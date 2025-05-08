@@ -1,0 +1,103 @@
+/* Estilos para menu.html */
+body.menu-page { /* Específico para la página de menú si quieres diferenciarla más */
+    background-color: #eef1f5; /* Un fondo ligeramente diferente para el menú */
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu-box {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Un poco más ancho para el menú */
+    text-align: center;
+}
+
+.menu-box h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* Navegación principal */
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-navigation li {
+    margin-bottom: 15px;
+}
+
+.nav-button {
+    display: block;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Efecto sutil al pasar el mouse */
+}
+
+/* Sección de cerrar sesión */
+.logout-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Separador */
+}
+
+.btn-logout {
+    background-color: #e74c3c; /* Rojo para cerrar sesión */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block; /* Para que el padding funcione correctamente */
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* Ajustes responsivos para el menú */
+@media (max-width: 600px) {
+    .menu-box {
+        padding: 25px 20px;
+    }
+
+    .menu-box h1 {
+        font-size: 22px;
+    }
+
+    .nav-button {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    .btn-logout {
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+}
