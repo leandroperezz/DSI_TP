@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro a Beca - Selección</title>
+    <link rel="stylesheet" href="/Estilos/elijobeca.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container"> <div class="form-box"> <header class="form-header">
+                <h1>Registro a beca</h1>
+                <a href="#" class="btn-back">&#x2190; Volver</a> </header>
+
+            <main>
+                <label for="listaBecas" class="visually-hidden">Seleccione una beca:</label>
+                <select id="listaBecas" name="listaBecas"> <option value="">-- Seleccione una beca --</option>
+                    <option value="impulso">Beca "Impulso Académico"</option>
+                    <option value="progresar">Beca "Progresar Estudiantil"</option>
+                    <option value="innovacion">Beca "Talento en Innovación"</option>
+                </select>
+
+                <div id="infoBecaSeleccionada" class="detalles-beca" aria-live="polite">
+                    <p class="placeholder-info">Seleccione una beca para ver sus detalles.</p>
+                </div>
+
+                <button href="registrobeca.html" type="button" class="btn-accion">Siguiente</button>
+            </main>
+        </div>
+    </div>
+    <script src="elijobeca.js"></script>
+</body>
+</html>

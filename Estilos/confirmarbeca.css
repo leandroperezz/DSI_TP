@@ -1,0 +1,177 @@
+/* /Estilos/estilos_confirmacion_datos.css */
+/* CSS proporcionado por el usuario para la página de confirmación */
+
+.confirmation-container {
+    padding: 25px 0px 0px 0px; /* Ajustado para que no haya doble padding con form-box */
+}
+
+.confirmation-intro {
+    font-size: 1rem;
+    color: var(--secondary-color, #6c757d); /* Fallback color */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.data-summary {
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius-std, 8px); /* Usando variable de form_general o fallback */
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color-light, #ddd); /* Usando variable o fallback */
+}
+
+.data-summary h2 {
+    font-size: 1.3rem;
+    color: var(--primary-blue, #007bff); /* Usando variable o fallback */
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color-light, #ddd);
+    padding-bottom: 10px;
+}
+
+.data-section {
+    margin-bottom: 20px;
+}
+
+.data-section:last-child {
+    margin-bottom: 0;
+}
+
+.data-section h3 {
+    font-size: 1.1rem;
+    color: var(--text-color-dark, #2c3e50); /* Usando variable o fallback */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.data-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color-medium, #555); /* Usando variable o fallback */
+    margin-bottom: 8px;
+}
+
+.data-section p strong {
+    color: var(--primary-blue, #007bff);
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.data-section span {
+    color: var(--text-color-medium, #555);
+}
+
+.data-section small {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--secondary-color, #6c757d);
+    margin-top: 5px;
+}
+
+.student-info-confirm {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: var(--border-radius-std, 8px);
+    border: 1px solid #ced4da; /* Un borde un poco más definido */
+}
+
+/* Estilos específicos para la sección de Pasantía Seleccionada */
+.pasantia-confirm-details {
+    background-color: #e6f7ff; /* Un azul muy pálido */
+    padding: 15px;
+    border-radius: var(--border-radius-std, 8px);
+    border: 1px solid #b3e0ff; /* Borde azul claro */
+}
+.pasantia-confirm-details h3 {
+    color: #0056b3; /* Azul más oscuro para el título */
+}
+
+
+.confirmation-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.confirmation-actions form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*
+   Los estilos para .submit-button.confirm-button y .button-secondary.modify-button
+   se tomarán del CSS que me proporcionaste.
+   Asegúrate que las variables de color y .submit-button base estén definidas
+   en estilos_formulario_general.css o aquí.
+*/
+.submit-button { /* Estilo base para submit-button si no está en el general */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.confirmation-actions .submit-button.confirm-button {
+    background-color: #28a745; /* Verde para confirmar */
+    /* border-color: #28a745; no es necesario si no hay borde */
+}
+
+.confirmation-actions .submit-button.confirm-button:hover {
+    background-color: #218838;
+    /* border-color: #1e7e34; */
+}
+
+.button-secondary.modify-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--secondary-color, #6c757d);
+    color: var(--white-color, #ffffff);
+    border: none;
+    border-radius: var(--border-radius-std, 8px);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button-secondary.modify-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 600px) {
+    .confirmation-container {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .data-summary h2 {
+        font-size: 1.2rem;
+    }
+
+    .data-section h3 {
+        font-size: 1rem;
+    }
+
+    .data-section p {
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 480px) { /* Este anidado es del CSS original, lo mantengo */
+        .confirmation-actions form {
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        .confirmation-actions .submit-button,
+        .confirmation-actions .button-secondary {
+            width: auto;
+            flex-grow: 1;
+            max-width: 250px;
+        }
+    }
+}

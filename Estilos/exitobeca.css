@@ -1,0 +1,137 @@
+/* /Estilos/estilos_pagina_exito.css */
+
+.form-box.success-box {
+    max-width: 600px; /* Puede ser un poco más angosto que los formularios complejos */
+    text-align: center; /* Centrar el contenido dentro del form-box */
+}
+
+.form-box.success-box .form-header h1 {
+    width: 100%; /* Asegurar que el título se centre bien */
+    text-align: center;
+}
+
+
+.success-content {
+    padding: 20px 0; /* Padding vertical, el horizontal lo da form-box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-icon {
+    margin-bottom: 25px;
+}
+
+/* Estilo para el ícono de check (Unicode) */
+.success-icon span {
+    font-size: 4.5rem; /* Tamaño grande para el check */
+    color: #28a745;   /* Color verde de éxito (similar al btn-accion) */
+    line-height: 1;
+    display: inline-block;
+    border: 3px solid #28a745;
+    border-radius: 50%;
+    padding: 10px 12px; /* Ajuste para centrar mejor el checkmark */
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el SVG checkmark (si se usa la Opción 2 del HTML) */
+.checkmark-svg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 3; /* Grosor de las líneas del SVG */
+    stroke: #fff; /* Color de la marca de check */
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #28a745;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke: #28a745; /* Color del círculo */
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+    100% { stroke-dashoffset: 0; }
+}
+@keyframes scale {
+    0%, 100% { transform: none; }
+    50% { transform: scale3d(1.1, 1.1, 1); }
+}
+@keyframes fill {
+    100% { box-shadow: inset 0px 0px 0px 40px #28a745; } /* Relleno del círculo */
+}
+/* Fin estilos SVG */
+
+
+.success-content h2 {
+    font-size: 1.7rem;
+    color: var(--text-color-dark, #2c3e50);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.success-content p {
+    font-size: 1rem;
+    color: var(--text-color-medium, #555);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    max-width: 90%; /* Para que no sea demasiado ancho el texto */
+}
+.success-content p:last-of-type { /* Último párrafo antes del botón */
+    margin-bottom: 30px;
+}
+
+
+.success-actions {
+    margin-top: 10px; /* Espacio antes del botón */
+}
+
+/* El .btn-accion ya está estilizado en estilos_formulario_general.css */
+/* Pero si queremos un color diferente para este botón "Volver al Inicio" */
+.success-actions .btn-accion {
+    background-color: var(--primary-blue, #3498db); /* Azul, por ejemplo */
+    width: auto; /* Para que no ocupe todo el ancho si no es necesario */
+    min-width: 180px;
+}
+.success-actions .btn-accion:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+
+/* Ajustes responsivos para la página de éxito */
+@media (max-width: 600px) {
+    .form-box.success-box {
+        padding: 25px 20px; /* Menos padding lateral en el form-box */
+    }
+    .success-icon span {
+        font-size: 3.5rem;
+        width: 70px;
+        height: 70px;
+    }
+    .checkmark-svg {
+        width: 70px;
+        height: 70px;
+    }
+    .success-content h2 {
+        font-size: 1.4rem;
+    }
+    .success-content p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,101 @@
+/* Estilos para la página de éxito (exito.css) */
+
+/* ... (otros estilos que ya tienes como .success-page-container, .header, etc.) ... */
+
+.success-message-container {
+    padding: 30px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 150px); /* Ajusta este 150px si la altura del header + padding del body es diferente */
+    /* gap: 20px; */ /* Considera usar 'gap' si prefieres espaciado uniforme entre todos los elementos hijos */
+}
+
+.success-icon {
+    margin-bottom: 25px;
+}
+
+.success-icon span {
+    font-size: 5rem;
+    color: #28a745;
+    line-height: 1;
+    display: inline-block;
+    border: 3px solid #28a745;
+    border-radius: 50%;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-message-container h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-weight: 700;
+}
+
+.success-message-container p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 15px; /* Espacio general debajo de cada párrafo */
+    max-width: 450px;
+}
+
+/* Elimina o comenta la regla específica para p:last-of-type si la tenías así:
+.success-message-container p:last-of-type {
+    margin-bottom: 30px;  <-- Comentar o eliminar esta línea
+}
+*/
+
+.success-actions {
+    margin-top: 25px;   /* <<-- AÑADIDO: Margen superior para separar del texto de arriba */
+    width: 100%;        /* Asegura que el contenedor ocupe el ancho para centrar bien el botón */
+    text-align: center; /* Centra el botón (que es inline-block) dentro de este div */
+}
+
+.success-actions .submit-button.home-button {
+    background-color: var(--primary-color);
+    padding: 12px 30px;
+    width: auto;
+    max-width: 250px;
+    display: inline-block;
+}
+
+.success-actions .submit-button.home-button:hover {
+    background-color: #0056b3;
+}
+
+/* ... (resto de tus estilos y media queries) ... */
+
+@media (max-width: 600px) {
+    .success-message-container {
+        padding: 25px 20px;
+        /* min-height: calc(100vh - 120px); */ /* Ejemplo de ajuste para móvil */
+    }
+
+    .success-icon span {
+        font-size: 4rem;
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+    }
+
+    .success-message-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .success-message-container p {
+        font-size: 0.95rem;
+        margin-bottom: 10px; /* Ajuste para móvil si es necesario */
+    }
+
+    .success-actions {
+        margin-top: 20px; /* Ajuste del margen para móvil si es necesario */
+    }
+}

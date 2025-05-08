@@ -3,55 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitud de Registro a Pasantía</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Registro a Pasantía - Selección</title>
+    <link rel="stylesheet" href="/Estilos/elijopasantía.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <div class="form-container">
         <div class="form-box">
-            <div class="form-header">
-                <a href="registro_pasantia.html" class="btn-back">&larr; Volver a Selección</a>
-                <h1>Solicitud de Registro a Pasantía</h1>
-            </div>
+            <header class="form-header">
+                <h1>Registro a pasantía</h1>
+                <a href="#" class="btn-back">&#x2190; Volver</a>
+            </header>
 
-            <form action="confirmacion_pasantia.html" method="GET"> <fieldset class="fieldset-display-static"> <legend>Datos del Estudiante (Información del sistema)</legend>
-                    <div class="static-info-group">
-                        <span class="static-label">Estudiante:</span>
-                        <span class="static-value">Pérez, Juan</span> </div>
-                    <div class="static-info-group">
-                        <span class="static-label">Carrera:</span>
-                        <span class="static-value">Ingeniería en Sistemas de Información</span> </div>
-                    <div class="static-info-group">
-                        <span class="static-label">Promedio:</span>
-                        <span class="static-value">8.75</span> </div>
-                </fieldset>
+            <main>
+                <label for="listaItemsPasantia" class="visually-hidden">Seleccione una pasantía:</label>
+                <select id="listaItemsPasantia" name="listaItemsPasantia">
+                    <option value="">Lista de pasantías</option>
+                    <option value="frontend">Pasantía en Desarrollo Web Frontend</option>
+                    <option value="marketing">Pasantía en Marketing Digital</option>
+                    <option value="datos">Pasantía en Análisis de Datos Jr.</option>
+                </select>
 
-                <fieldset>
-                    <legend>Completar Datos Personales y de Contacto</legend>
-                    <div class="input-group"> <label for="dni">DNI</label>
-                        <input type="text" id="dni" name="dni" required placeholder="Ingrese su DNI">
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Ingrese su email">
-                    </div>
-                    <div class="input-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="Ingrese su teléfono">
-                    </div>
-                     <div class="input-group">
-                        <label for="curso">Año que cursa</label>
-                        <input type="text" id="curso" name="curso" required placeholder="Ej: 3ro, 4to año, etc.">
-                    </div>
-                    <div class="input-group">
-                        <label for="cvFile">Adjunte archivo PDF de CV</label>
-                        <input type="file" id="cvFile" name="cvFile" accept=".pdf" required>
-                        <small class="form-text text-muted">El archivo debe ser PDF y menor a 5MB (sin validación en esta página).</small>
-                    </div>
-                </fieldset>
+                <div id="infoItemSeleccionado" class="detalles-beca" aria-live="polite">
+                    <p class="placeholder-info">Seleccione una pasantía para ver sus detalles.</p>
+                </div>
 
-                <button type="submit" class="btn-accion">Siguiente</button>
-            </form>
+                <button href="registropasantía.html" type="button" class="btn-accion">Siguiente</button>
+            </main>
         </div>
     </div>
+    <script src="elijopasantía.js"></script>
 </body>
 </html>
