@@ -75,6 +75,12 @@ body {
     width: 100%;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+
+    /* Añadido/Asegurado para que <a> se comporte como un botón de bloque */
+    display: block;         /* Hace que el enlace ocupe todo el ancho y se comporte como un bloque */
+    text-decoration: none;  /* Quita el subrayado por defecto de los enlaces */
+    text-align: center;     /* Centra el texto "Ingresar" dentro del "botón" */
+    box-sizing: border-box; /* Importante si width es 100% para que el padding no lo desborde */
 }
 
 .btn-ingresar:hover {
@@ -116,5 +122,8 @@ body {
     .btn-ingresar {
         padding: 10px 15px;
         font-size: 15px;
+        display: block; /* o inline-block, dependiendo de tu layout */
+    text-decoration: none; /* Para quitar el subrayado del enlace */
+    text-align: center; /* Para centrar el texto si es inline-block con width 100% */
     }
 }
