@@ -68,8 +68,6 @@
 
 /* Para reutilizar el estilo de student-info pero con posible adaptación */
 .student-info-confirm {
-    /* Si necesitas algún estilo específico para el bloque de info de estudiante aquí */
-    /* Por ejemplo, si quieres que se parezca más al student-info del formulario: */
     background-color: #e9ecef;
     padding: 15px;
     border-radius: var(--border-radius);
