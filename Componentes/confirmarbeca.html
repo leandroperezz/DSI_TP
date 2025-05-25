@@ -9,19 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>Confirmar Datos de Solicitud</h1>
-        </header>
 
         <main class="confirmation-container">
             <p class="confirmation-intro">Por favor, revisa cuidadosamente los datos de tu solicitud antes de confirmar.</p>
 
             <div class="data-summary">
-                <h2>Resumen de la Solicitud</h2>
+                <h2>Resumen de la Solicitud de Beca</h2>
+
+                <div class="data-section beca-confirm-details">
+                        <h3>Beca Seleccionada:</h3>
+                        <p><strong>Nombre:</strong> <span id="confirmPasantiaNombre">Talento en Innovación</span></p>
+                        <p><strong>Duración Estimada:</strong> <span id="confirmPasantiaDuracion">Según proyecto (máx. 12 meses).</span></p>
+                </div>
 
                 <div class="data-section">
                     <h3>Datos Personales y de Contacto:</h3>
-                    <p><strong>DNI:</strong> <span id="confirmDni">12345678</span></p>
                     <p><strong>Email:</strong> <span id="confirmEmail">ejemplo123@gmail.com</span></p>
                     <p><strong>Teléfono:</strong> <span id="confirmTelefono">+54 9 1234 567890</span></p>
                     <p><strong>Curso:</strong> <span id="confirmCurso">3</span></p>
@@ -30,21 +32,17 @@
                 <div class="data-section student-info-confirm">
                     <h3>Información Académica:</h3>
                     <p><strong>Estudiante:</strong> Ivan Rocchia</p>
+                    <p><strong>DNI:</strong> <span id="confirmDni">12345678</span></p>
+                    <p><strong>Legajo:</strong> 16262</p>
                     <p><strong>Carrera:</strong> Ing. en sistemas de información.</p>
                     <p><strong>Promedio:</strong> 8.50</p>
-                </div>
-
-                <div class="data-section">
-                    <h3>Currículum Vitae:</h3>
-                    <p><strong>Archivo CV:</strong> <span id="confirmCv">Curriculum.pdf</span></p>
-                    <small>Recuerda que el archivo debe ser menor a 5 MB.</small>
                 </div>
             </div>
         </main>
         <div class="confirmation-actions">
                 <div>
                 <a href="/Componentes/exito.html"  type="submit" class="submit-button confirm-button">Confirmar y Enviar Solicitud</a>
-                <a href="/Componentes/registropasantía.html" class="button-secondary modify-button">Modificar Datos</a>
+                <a href="/Componentes/registrobeca.html" class="button-secondary modify-button">Modificar Datos</a>
                 </div>
             </div>
     </div>

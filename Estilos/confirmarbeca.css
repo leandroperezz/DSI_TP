@@ -98,6 +98,12 @@ body {
     margin-top: 5px;
 }
 
+.beca-confirm-details {
+    background-color: #e9f7ff;
+    border-color: #b3e0ff;
+}
+
+
 .student-info-confirm { /* Clase específica para info académica */
     background-color: #e6fff0; /* Un verde claro diferente */
     border-color: #99ffc2;

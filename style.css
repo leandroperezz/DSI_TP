@@ -166,3 +166,7 @@ body {
     border-color: #007bff; /* Que el borde del botón también cambie de color con el focus */
     /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Opcional para el botón */
 }
+
+.oficina{
+    color:rgba(7, 17, 29, 0.575)
+}
