@@ -1,4 +1,4 @@
-/* Estilos para confirmar.html - Confirmación Solicitud Pasantía */
+/* Estilos para confirmarbeca.html - Confirmación Solicitud Beca */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f6f8;
@@ -11,32 +11,16 @@ body {
     min-height: 100vh;
 }
 
-.container { /* Div padre */
+.form-container { /* Es el div padre con clase .form-container */
     width: 100%;
-    max-width: 750px;
+    max-width: 750px; /* Un poco más ancho para el resumen */
+}
+
+.form-box { /* Es el div hijo con clase .form-box */
     background-color: #ffffff;
-    padding: 0; /* Padding se manejará en el header y confirmation-container */
+    padding: 30px 40px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.07);
-    overflow: hidden; /* Para que el header no se salga del borde redondeado */
-}
-
-.header { /* Encabezado dentro de .container */
-    background-color: #007bff; /* Azul para el header */
-    color: white;
-    padding: 20px 30px;
-    text-align: center; /* Centrar el título */
-    margin-bottom: 0; /* Sin margen inferior, se une al main */
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.confirmation-container { /* El <main> */
-    padding: 30px 40px; /* Padding interno */
 }
 
 .confirmation-intro {
@@ -51,7 +35,7 @@ body {
 
 .data-summary h2 {
     font-size: 20px;
-    color: #0056b3;
+    color: #0056b3; /* Azul distintivo */
     margin-bottom: 20px;
     text-align: center;
     font-weight: 500;
@@ -87,7 +71,7 @@ body {
     margin-right: 5px;
 }
 
-.data-section span {
+.data-section span { /* Los spans que contienen los datos */
     color: #505050;
 }
 
@@ -98,28 +82,35 @@ body {
     margin-top: 5px;
 }
 
-.student-info-confirm { /* Clase específica para info académica */
-    background-color: #e6fff0; /* Un verde claro diferente */
-    border-color: #99ffc2;
+/* Estilos específicos para la sección de pasantía/beca seleccionada */
+.pasantia-confirm-details { /* O beca-confirm-details */
+    background-color: #e9f7ff;
+    border-color: #b3e0ff;
+}
+.pasantia-confirm-details h3 {
+    color: #004a99;
+}
+
+.student-info-confirm {
+    background-color: #e6fffa;
+    border-color: #99ffe6;
 }
 .student-info-confirm h3 {
-    color: #006636;
+    color: #006652;
 }
 
 .confirmation-actions {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #eee;
-    text-align: center;
-}
-.confirmation-actions div { /* El div que envuelve los botones */
-    display: flex;
-    justify-content: space-around;
+    text-align: center; /* Centrar botones si son inline-block */
+    display: flex; /* O usar flex para espaciarlos */
+    justify-content: space-around; /* O space-between, center */
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Espacio entre botones si son varios */
 }
 
-.submit-button.confirm-button {
+.submit-button.confirm-button { /* Botón de Confirmar */
     background-color: #28a745; /* Verde */
     color: white;
     padding: 12px 25px;
@@ -129,13 +120,12 @@ body {
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease;
-    flex-grow: 1; /* Para que los botones compartan espacio si son pocos */
 }
 .submit-button.confirm-button:hover {
     background-color: #218838;
 }
 
-.button-secondary.modify-button {
+.button-secondary.modify-button { /* Botón de Modificar */
     background-color: #ffc107; /* Amarillo/Naranja */
     color: #212529;
     padding: 12px 25px;
@@ -145,7 +135,6 @@ body {
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease;
-    flex-grow: 1;
 }
 .button-secondary.modify-button:hover {
     background-color: #e0a800;

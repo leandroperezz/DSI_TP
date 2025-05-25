@@ -1,0 +1,86 @@
+/* Estilos para exitobeca.html - Página de Éxito Beca */
+/* Puede compartir estilos con estilos_pagina_exito.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f7; /* Fondo suave */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente la caja de éxito */
+    min-height: 100vh;
+    text-align: center;
+}
+
+.form-container { /* Div padre con .form-container */
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-box.success-box { /* Div hijo con .form-box y .success-box */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    color: #007bff; /* Azul */
+    margin: 0;
+    font-weight: 500;
+}
+
+.success-icon {
+    font-size: 50px;
+    color: #28a745; /* Verde para el ícono de éxito */
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.success-content h2 {
+    font-size: 22px;
+    color: #2a4b7c;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.success-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #727272;
+    margin-bottom: 12px;
+}
+.success-content p:last-of-type {
+    margin-bottom: 25px; /* Más espacio antes del botón */
+}
+
+.success-actions {
+    margin-top: 20px;
+}
+
+.btn-accion { /* Botón "Volver al Inicio" */
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-accion:hover {
+    background-color: #0056b3;
+}
+
+/* Si estilos_pagina_exito.css define elementos comunes, ajusta aquí */
