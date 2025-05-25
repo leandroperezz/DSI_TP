@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             descripcion: 'Apoyo para estudiantes con excelente desempeño académico.',
             requisitos: {
                 carrera: 'Todas las carreras elegibles.',
-                ano: 'A partir de 2º año.',
+                año: 'A partir de 2º año.',
                 promedio: 'Mínimo 8.0.'
             },
             beneficios: {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             descripcion: 'Ayuda económica para facilitar la continuidad de los estudios.',
             requisitos: {
                 carrera: 'Todas las carreras elegibles.',
-                ano: '1º a 5º año.',
+                año: '1º a 5º año.',
                 ingresos: 'Acreditar necesidad.'
             },
             beneficios: {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             descripcion: 'Fomento a proyectos estudiantiles con potencial innovador.',
             requisitos: {
                 carrera: 'Carreras de Ciencia, Tecnología, Ingeniería y Diseño.',
-                ano: 'A partir de 3er año.',
+                año: 'A partir de 3er año.',
                 proyecto: 'Presentar idea de proyecto.'
             },
             beneficios: {

@@ -59,41 +59,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    const selectPasantias = document.getElementById('listaPasantias');
-    const infoContainer = document.getElementById('infoPasantiaSeleccionada');
+    const selectPasantias = document.getElementById('listaItemsPasantia');
+    const infoContainer = document.getElementById('infoItemSeleccionado');
     const placeholderText = '<p class="placeholder-info">Seleccione una pasantía para ver sus detalles.</p>';
 
-    infoContainer.innerHTML = placeholderText; // Mostrar placeholder al inicio
+    // Es una buena práctica verificar si los elementos existen antes de usarlos
+    if (infoContainer) {
+        infoContainer.innerHTML = placeholderText; // Mostrar placeholder al inicio
+    } else {
+        console.error("Error: El contenedor de información 'infoItemSeleccionado' no fue encontrado.");
+    }
 
-    selectPasantias.addEventListener('change', function() {
-        const selectedValue = this.value;
-        if (selectedValue && pasantiasData[selectedValue]) {
-            const pasantia = pasantiasData[selectedValue];
-            let htmlContent = `<h3>${pasantia.nombre}</h3>`;
+    if (selectPasantias && infoContainer) { // Asegúrate de que ambos elementos existan
+        selectPasantias.addEventListener('change', function() {
+            const selectedValue = this.value;
+            if (selectedValue && pasantiasData[selectedValue]) {
+                const pasantia = pasantiasData[selectedValue];
+                let htmlContent = `<h3>${pasantia.nombre}</h3>`;
 
-            htmlContent += `<p><strong>Descripción de pasantía:</strong></p>
-                            <ul>
-                                <li>Tareas: ${pasantia.descripcion.tareas}</li>
-                                <li>Responsabilidades: ${pasantia.descripcion.responsabilidades}</li>
-                            </ul>`;
-            
-            htmlContent += `<p><strong>Requisitos:</strong></p><ul>`;
-            htmlContent += `<li>Carrera: ${pasantia.requisitos.carrera}</li>`;
-            htmlContent += `<li>Año que cursa: ${pasantia.requisitos.anoQueCursa}</li>`;
-            htmlContent += `<li>Disponibilidad Horaria: ${pasantia.requisitos.disponibilidadHoraria}</li>`;
-            htmlContent += `<li>Experiencia: ${pasantia.requisitos.experiencia}</li>`;
-            htmlContent += `<li>Aptitudes: ${pasantia.requisitos.aptitudes}</li>`;
-            htmlContent += `</ul>`;
+                htmlContent += `<p><strong>Descripción de pasantía:</strong></p>
+                                <ul>
+                                    <li>Tareas: ${pasantia.descripcion.tareas}</li>
+                                    <li>Responsabilidades: ${pasantia.descripcion.responsabilidades}</li>
+                                </ul>`;
+                
+                htmlContent += `<p><strong>Requisitos:</strong></p><ul>`;
 
-            htmlContent += `<p><strong>Condiciones:</strong></p><ul>`;
-            htmlContent += `<li>Duración: ${pasantia.condiciones.duracion}</li>`;
-            htmlContent += `<li>Horarios: ${pasantia.condiciones.horarios}</li>`;
-            htmlContent += `<li>Lugar de trabajo: ${pasantia.condiciones.lugarDeTrabajo}</li>`;
-            htmlContent += `</ul>`;
-            
-            infoContainer.innerHTML = htmlContent;
-        } else {
-            infoContainer.innerHTML = placeholderText;
+                htmlContent += `<li>Carrera: ${pasantia.requisitos.carrera}</li>`;
+                htmlContent += `<li>Año que cursa: ${pasantia.requisitos.anoQueCursa}</li>`; // anoQueCursa en lugar de ano
+                htmlContent += `<li>Disponibilidad Horaria: ${pasantia.requisitos.disponibilidadHoraria}</li>`;
+                htmlContent += `<li>Experiencia: ${pasantia.requisitos.experiencia}</li>`;
+                htmlContent += `<li>Aptitudes: ${pasantia.requisitos.aptitudes}</li>`;
+                htmlContent += `</ul>`;
+
+                htmlContent += `<p><strong>Condiciones:</strong></p><ul>`;
+                htmlContent += `<li>Duración: ${pasantia.condiciones.duracion}</li>`;
+                htmlContent += `<li>Horarios: ${pasantia.condiciones.horarios}</li>`;
+                htmlContent += `<li>Lugar de trabajo: ${pasantia.condiciones.lugarDeTrabajo}</li>`; // lugarDeTrabajo en lugar de lugarDeTrabajo
+                htmlContent += `</ul>`;
+                
+                infoContainer.innerHTML = htmlContent;
+            } else {
+                infoContainer.innerHTML = placeholderText;
+            }
+        });
+    } else {
+        if (!selectPasantias) {
+            console.error("Error: El select 'listaItemsPasantia' no fue encontrado.");
         }
-    });
+    }
 });
