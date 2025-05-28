@@ -1,4 +1,4 @@
-Link prototipo Figma: https://www.figma.com/design/WwgCNZeXfmHtmH3f6jOQtP/DSI---Prototipo?node-id=0-1&t=3FG6iIEAPSKfBZkC-1
+Link prototipo Figma: https://www.figma.com/design/WwgCNZeXfmHtmH3f6jOQtP/DSI---Prototipo?node-id=0-1&t=lPii5ouzbgLW2Xsl-1
 
 Host estático: https://6832a6319402e700098d3130--registropasantiasbecas.netlify.app/
 
