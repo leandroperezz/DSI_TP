@@ -4,4 +4,6 @@ Host estático: https://6832a6319402e700098d3130--registropasantiasbecas.netlify
 
 Drive con archivos: https://drive.google.com/drive/folders/1RcbareVSDF_JtV5x4kw6xuQ_x3_1MbyY?usp=sharing
 
+Repositorio Backend: https://github.com/leandroperezz/BackendRegistroDSI
+
 Problemática: Inconsistencia de datos y falta de notificación a la hora de postularse a una Beca y/o Pasantía.
