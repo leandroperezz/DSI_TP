@@ -13,7 +13,7 @@ const PaginaLogin = () => {
 
   useEffect(() => {
     if (!carga && isAuthenticated) {
-      navigate('/dashboard');
+      navigate('/menu');
     }
   }, [isAuthenticated, carga, navigate]);
 
@@ -37,28 +37,28 @@ const PaginaLogin = () => {
     <div style={{
       maxWidth: '400px',
       margin: '50px auto',
-      padding: '30px', /* Mayor padding para parecerse a la imagen */
-      border: '1px solid #e0e0e0', /* Borde más sutil */
-      borderRadius: '12px', /* Bordes más redondeados */
-      boxShadow: '0 4px 15px rgba(0,0,0,0.1)', /* Sombra más pronunciada */
-      backgroundColor: 'white', /* Fondo blanco */
-      fontFamily: 'Arial, sans-serif' /* Fuente similar */
+      padding: '30px',
+      border: '1px solid #e0e0e0',
+      borderRadius: '12px',
+      boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+      backgroundColor: 'white',
+      fontFamily: 'Arial, sans-serif'
     }}>
       <h2 style={{
         textAlign: 'center',
-        marginBottom: '30px', /* Más espacio debajo del título */
+        marginBottom: '30px',
         color: '#333',
-        fontSize: '1.8em' /* Tamaño de fuente del título */
+        fontSize: '1.8em'
       }}>Acceso Estudiantes</h2>
       {mensaje && <p style={{
         color: mensaje.includes('Error') ? 'red' : 'green',
         textAlign: 'center',
         marginBottom: '15px',
-        fontSize: '0.9em' /* Tamaño de fuente del mensaje */
+        fontSize: '0.9em'
       }}>{mensaje}</p>}
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '20px' }}> {/* Más espacio debajo del grupo */}
-          <label htmlFor="legajo" style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: '#555' }}>Legajo:</label> {/* Estilo de label */}
+        <div style={{ marginBottom: '20px' }}>
+          <label htmlFor="legajo" style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: '#555' }}>Legajo:</label>
           <input
             type="text"
             id="legajo"
@@ -67,17 +67,17 @@ const PaginaLogin = () => {
             required
             style={{
               width: '100%',
-              padding: '12px', /* Mayor padding en input */
-              border: '1px solid #ddd', /* Borde sutil */
-              borderRadius: '6px', /* Bordes redondeados */
+              padding: '12px',
+              border: '1px solid #ddd',
+              borderRadius: '6px',
               boxSizing: 'border-box',
-              fontSize: '1em' /* Tamaño de fuente */
+              fontSize: '1em'
             }}
           />
         </div>
-        <div style={{ marginBottom: '20px' }}> {/* Más espacio debajo del grupo */}
+        <div style={{ marginBottom: '20px' }}>
           <label htmlFor="contrasena" style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: '#555' }}>Contraseña:</label>
-          <div style={{ position: 'relative' }}> {/* Contenedor para el ojo */}
+          <div style={{ position: 'relative' }}>
             <input
               type={mostrarContraseña ? 'text' : 'password'}
               id="contrasena"
@@ -91,10 +91,9 @@ const PaginaLogin = () => {
                 borderRadius: '6px',
                 boxSizing: 'border-box',
                 fontSize: '1em',
-                paddingRight: '40px' /* Espacio para el ojo */
+                paddingRight: '40px'
               }}
             />
-            {/* Ojo para mostrar/ocultar contraseña */}
             <span
               onClick={() => setMostrarContraseña(!mostrarContraseña)}
               style={{
@@ -106,30 +105,29 @@ const PaginaLogin = () => {
                 color: '#888'
               }}
             >
-              {mostrarContraseña ? '👁️' : '🔒'} {/* Ícono de ojo abierto o cerrado, o candado */}
+              {mostrarContraseña ? '👁️' : '🔒'}
             </span>
           </div>
         </div>
         <button type="submit" style={{
           width: '100%',
-          padding: '15px', /* Más padding para el botón */
+          padding: '15px',
           backgroundColor: '#007bff',
           color: 'white',
           border: 'none',
-          borderRadius: '8px', /* Bordes más redondeados */
+          borderRadius: '8px',
           cursor: 'pointer',
-          fontSize: '1.1em', /* Tamaño de fuente del botón */
+          fontSize: '1.1em',
           fontWeight: 'bold',
-          marginBottom: '25px' /* Espacio debajo del botón */
+          marginBottom: '25px'
         }}>
           Ingresar
         </button>
       </form>
-      {/* Texto de recuperación de contraseña */}
       <p style={{ textAlign: 'center', fontSize: '0.9em', color: '#777', lineHeight: '1.5' }}>
         Si te olvidaste de la contraseña ponete en contacto con la oficina Alumnos.
         <br />
-        <a href="mailto:oficinaalumnos@universidad.com" style={{ color: '#007bff', textDecoration: 'none', fontWeight: 'bold' }}>
+        <a style={{ color: '#353535', textDecoration: 'none', fontWeight: 'bold' }}>
           oficinaalumnos@universidad.com
         </a>
       </p>
